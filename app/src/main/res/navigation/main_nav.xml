@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/bloggiesFragment">
+
+    <fragment
+        android:id="@+id/bloggiesFragment"
+        android:name="be.technifutur.exo1bloggies.BloggiesFragment"
+        android:label="fragment_bloggies"
+        tools:layout="@layout/fragment_bloggies" >
+        <action
+            android:id="@+id/action_bloggiesFragment_to_connexionFragment"
+            app:destination="@id/connexionFragment"
+            app:enterAnim="@animator/nav_default_enter_anim"
+            app:exitAnim="@animator/nav_default_exit_anim"
+            app:popEnterAnim="@animator/nav_default_pop_enter_anim"
+            app:popExitAnim="@animator/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_bloggiesFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/connexionFragment"
+        android:name="be.technifutur.exo1bloggies.ConnexionFragment"
+        android:label="fragment_connexion"
+        tools:layout="@layout/fragment_connexion" >
+        <argument
+            android:name="social"
+            app:argType="string"
+            android:defaultValue="twitter" />
+        <action
+            android:id="@+id/action_connexionFragment_to_validFragment"
+            app:destination="@id/validFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="be.technifutur.exo1bloggies.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_inscriptionValidFragment"
+            app:destination="@id/inscriptionValidFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/validFragment"
+        android:name="be.technifutur.exo1bloggies.ValidFragment"
+        android:label="fragment_valid"
+        tools:layout="@layout/fragment_valid" >
+        <argument
+            android:name="social"
+            app:argType="string"
+            android:defaultValue="twitter" />
+    </fragment>
+    <fragment
+        android:id="@+id/inscriptionValidFragment"
+        android:name="be.technifutur.exo1bloggies.InscriptionValidFragment"
+        android:label="fragment_inscription_valid"
+        tools:layout="@layout/fragment_inscription_valid" >
+        <argument
+            android:name="login"
+            app:argType="string"
+            android:defaultValue="anonyme" />
+    </fragment>
+</navigation>

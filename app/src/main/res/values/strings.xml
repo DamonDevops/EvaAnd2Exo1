@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Exo1Bloggies</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="twitter_connect">Connexion via Twitter</string>
+    <string name="facebook_connect">Connexion via Facebook</string>
+    <string name="bloggies_create">Création d\'un compte Bloggies</string>
+    <string name="email">Email/Login</string>
+    <string name="mot_de_passe">Mot de Passe</string>
+    <string name="connexion">Connexion</string>
+    <string name="inscription">Inscription</string>
+    <string name="password_confirmation">Confirmer Mot de Passe?</string>
+    <string name="ask_password">Mot de Passe ?</string>
+    <string name="ask_login">Login ?</string>
+    <string name="ask_email">Email ?</string>
+    <string name="valid_connexion">Félicitation, vous êtes connecté !</string>
+    <string name="bloggiesbanner">bloggiesBanner</string>
 </resources>
