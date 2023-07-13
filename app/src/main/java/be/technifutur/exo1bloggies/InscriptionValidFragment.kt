@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.navArgs
 import be.technifutur.exo1bloggies.databinding.FragmentInscriptionValidBinding
 
@@ -26,6 +27,9 @@ class InscriptionValidFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val activity = requireActivity() as AppCompatActivity
+        activity.supportActionBar?.title = getString(R.string.bloggies_welcome)
 
         "Bienvenue ${args.login}".also { binding.textView2.text = it }
     }
